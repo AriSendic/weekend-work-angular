@@ -1,0 +1,13 @@
+<div ng-app="app">
+  <div ng-controller="driversCtrl" ng-init="setup()">
+    <h1> 100 Chicago Taxi Drivers</h1>
+    <h3>Search for a name (e.g. Ahmed)<input ng-model="nameFilter"></h3>
+    <div ng-repeat="driver in drivers | limitTo : 100 | filter: {name: nameFilter}">  
+    <h4>{{driver.name}}</h4>
+    <h4>License status: {{driver.status}}</h4>
+    <h4>stautus date:  {{driver.status_date}}</h4>
+    </div>
+
+   
+  </div>
+</div>
